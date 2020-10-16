@@ -6,6 +6,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -43,7 +44,7 @@ public class HotelReservation {
 		int totalDays = countTotalDays(date1, date2);
 		int weekDays = countWeekDays(date1, date2);
 		int weekendDays = totalDays - weekDays;
-		return getCheapestHotels(weekDays, weekendDays);
+		return searchForCheapestHotels(weekDays, weekendDays);
 	}
 
 	/**
@@ -53,7 +54,12 @@ public class HotelReservation {
 	 * @param weekendDays
 	 * @return
 	 */
-	public Map<Hotel, Integer> getCheapestHotels(int weekDays, int weekendDays) {
+	public Map<Hotel, Integer> getCheapestHotels(String date1, String date2) {
+		Map<Hotel, Integer> cheapestHotels = searchFor(date1, date2);
+		return cheapestHotels;
+	}
+
+	public Map<Hotel, Integer> searchForCheapestHotels(int weekDays, int weekendDays) {
 		Map<Hotel, Integer> hotelCosts = new HashMap<>();
 		Map<Hotel, Integer> sortedHotelCosts = new HashMap<>();
 		if (hotels.size() == 0)
@@ -103,6 +109,24 @@ public class HotelReservation {
 		}
 
 		return weekDays;
+	}
+
+	/**
+	 * UC6
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public Map<Hotel, Integer> getCheapestAndBestRatedHotels(String date1, String date2) {
+		Map<Hotel, Integer> bestHotels = new HashMap<Hotel, Integer>();
+		Map<Hotel, Integer> cheapestHotels = searchFor(date1, date2);
+		int highestRating = (cheapestHotels.keySet().stream().max(Comparator.comparingInt(Hotel::getRating)).get())
+				.getRating();
+		cheapestHotels.forEach((k, v) -> {
+			if (k.getRating() == highestRating)
+				bestHotels.put(k, v);
+		});
+		return bestHotels;
 	}
 
 	public LocalDate toLocalDate(String date) {
