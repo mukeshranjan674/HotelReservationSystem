@@ -18,7 +18,9 @@ public class HotelReservation {
 		this.hotels = new ArrayList<Hotel>();
 	}
 
-	/** UC1
+	/**
+	 * UC1
+	 * 
 	 * @param hotel
 	 */
 	public void add(Hotel hotel) {
@@ -31,6 +33,7 @@ public class HotelReservation {
 
 	/**
 	 * UC2
+	 * 
 	 * @param date1
 	 * @param date2
 	 * @return
