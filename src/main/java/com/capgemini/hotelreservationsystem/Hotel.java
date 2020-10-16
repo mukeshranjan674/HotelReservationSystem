@@ -48,7 +48,9 @@ public class Hotel {
 		this.rating = rating;
 	}
 
-	/**UC9
+	/**
+	 * UC9
+	 * 
 	 * @param name
 	 * @param regularWeekdayRate
 	 * @param regularWeekendRate
