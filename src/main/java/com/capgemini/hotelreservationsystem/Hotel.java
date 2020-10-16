@@ -5,19 +5,9 @@ public class Hotel {
 	private String name;
 	private int regularWeekdayRate;
 	private int regularWeekendRate;
+	private int rating;
 	private int rewardsWeekdayRate;
 	private int rewardsWeekendRate;
-	private int rating;
-
-	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rewardsWeekdayRate,
-			int rewardsWeekendRate, int rating) {
-		this.name = name;
-		this.regularWeekdayRate = regularWeekdayRate;
-		this.regularWeekendRate = regularWeekendRate;
-		this.rewardsWeekdayRate = rewardsWeekdayRate;
-		this.rewardsWeekendRate = rewardsWeekendRate;
-		this.rating = rating;
-	}
 
 	/**
 	 * UC1
@@ -56,6 +46,24 @@ public class Hotel {
 		this.regularWeekdayRate = regularWeekdayRate;
 		this.regularWeekendRate = regularWeekendRate;
 		this.rating = rating;
+	}
+
+	/**UC9
+	 * @param name
+	 * @param regularWeekdayRate
+	 * @param regularWeekendRate
+	 * @param rating
+	 * @param rewardsWeekdayRate
+	 * @param rewardsWeekendRate
+	 */
+	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rating, int rewardsWeekdayRate,
+			int rewardsWeekendRate) {
+		this.name = name;
+		this.regularWeekdayRate = regularWeekdayRate;
+		this.regularWeekendRate = regularWeekendRate;
+		this.rating = rating;
+		this.rewardsWeekdayRate = rewardsWeekdayRate;
+		this.rewardsWeekendRate = rewardsWeekendRate;
 	}
 
 	public String getName() {
