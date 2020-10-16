@@ -44,11 +44,11 @@ public class HotelReservation {
 		int totalDays = countTotalDays(date1, date2);
 		int weekDays = countWeekDays(date1, date2);
 		int weekendDays = totalDays - weekDays;
-		if(type.equals("cheapest"))
+		if (type.equals("cheapest"))
 			return searchForCheapestHotels(weekDays, weekendDays);
 		else
 			return searchForBestRatedHotels(weekDays, weekendDays);
-		
+
 	}
 
 	/**
@@ -136,6 +136,7 @@ public class HotelReservation {
 
 	/**
 	 * UC7
+	 * 
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -144,14 +145,15 @@ public class HotelReservation {
 		Map<Hotel, Integer> bestHotels = searchFor(date1, date2, "best");
 		return bestHotels;
 	}
-	
+
 	public Map<Hotel, Integer> searchForBestRatedHotels(int weekDays, int weekendDays) {
 		Map<Hotel, Integer> bestHotels = new HashMap<Hotel, Integer>();
 		int highestRating = (hotels.stream().max(Comparator.comparingInt(Hotel::getRating)).get()).getRating();
-		
-		hotels.forEach(n -> {if (n.getRating() == highestRating)
-							bestHotels.put(n,n.getRegularWeekdayRate() * weekDays 
-							+ n.getRegularWeekendRate() * weekendDays );});
+
+		hotels.forEach(n -> {
+			if (n.getRating() == highestRating)
+				bestHotels.put(n, n.getRegularWeekdayRate() * weekDays + n.getRegularWeekendRate() * weekendDays);
+		});
 		return bestHotels;
 	}
 

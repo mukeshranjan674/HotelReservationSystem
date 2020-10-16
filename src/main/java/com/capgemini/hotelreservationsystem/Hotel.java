@@ -19,6 +19,45 @@ public class Hotel {
 		this.rating = rating;
 	}
 
+	/**
+	 * UC1
+	 * 
+	 * @param name
+	 * @param regularWeekdayRate
+	 */
+	public Hotel(String name, int regularWeekdayRate) {
+		this.name = name;
+		this.regularWeekdayRate = regularWeekdayRate;
+	}
+
+	/**
+	 * UC3
+	 * 
+	 * @param name
+	 * @param regularWeekdayRate
+	 * @param regularWeekendRate
+	 */
+	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate) {
+		this.name = name;
+		this.regularWeekdayRate = regularWeekdayRate;
+		this.regularWeekendRate = regularWeekendRate;
+	}
+
+	/**
+	 * UC5
+	 * 
+	 * @param name
+	 * @param regularWeekdayRate
+	 * @param regularWeekendRate
+	 * @param rating
+	 */
+	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rating) {
+		this.name = name;
+		this.regularWeekdayRate = regularWeekdayRate;
+		this.regularWeekendRate = regularWeekendRate;
+		this.rating = rating;
+	}
+
 	public String getName() {
 		return name;
 	}

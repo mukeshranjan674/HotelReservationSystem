@@ -17,9 +17,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenHotelAddedToSystemShouldGetAdded() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110);
+		Hotel hotel2 = new Hotel("Bridgewood", 160);
+		Hotel hotel3 = new Hotel("Ridgewood", 220);
 		Hotel[] hotelList = { hotel1, hotel2, hotel3 };
 		List<Hotel> hotels = Arrays.asList(hotelList);
 		HotelReservation hotelReservation = new HotelReservation();
@@ -35,9 +35,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenGivenDateRangeShouldReturnCheapestHotel() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110);
+		Hotel hotel2 = new Hotel("Bridgewood", 160);
+		Hotel hotel3 = new Hotel("Ridgewood", 220);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
@@ -52,9 +52,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenGivenHotelAddedShouldAddWeekendPrices() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110, 90);
+		Hotel hotel2 = new Hotel("Bridgewood", 160, 60);
+		Hotel hotel3 = new Hotel("Ridgewood", 220, 150);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
@@ -70,9 +70,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenGivenDateRangeShouldReturnCheapestHotels() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110, 90);
+		Hotel hotel2 = new Hotel("Bridgewood", 150, 50);
+		Hotel hotel3 = new Hotel("Ridgewood", 220, 150);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
@@ -87,9 +87,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenHotelAddedToSystemRatingShouldGetAdded() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 3);
+		Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 4);
+		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 5);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
@@ -105,9 +105,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenGivenDateRangeShouldReturnCheapestBestRatedHotels() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 3);
+		Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 4);
+		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 5);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
@@ -123,9 +123,9 @@ public class HotelReservationTest {
 	 */
 	@Test
 	public void whenGivenDateRangeShouldReturnBestRatedHotels() {
-		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
-		Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 110, 50, 4);
-		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
+		Hotel hotel1 = new Hotel("Lakewood", 110, 90, 3);
+		Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 4);
+		Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 5);
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.add(hotel1);
 		hotelReservation.add(hotel2);
