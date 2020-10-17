@@ -58,8 +58,8 @@ public class Hotel {
 	 * @param rewardsWeekdayRate
 	 * @param rewardsWeekendRate
 	 */
-	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rating, int rewardsWeekdayRate,
-			int rewardsWeekendRate) {
+	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rating, 
+							  int rewardsWeekdayRate, int rewardsWeekendRate) {
 		this.name = name;
 		this.regularWeekdayRate = regularWeekdayRate;
 		this.regularWeekendRate = regularWeekendRate;
